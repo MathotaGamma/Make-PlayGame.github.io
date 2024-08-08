@@ -1,3 +1,4 @@
+alert('hey');
 let first = true;
 let sleep_time_list = [0];
 let paragraph_list = [];
