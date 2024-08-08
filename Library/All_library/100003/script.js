@@ -121,5 +121,5 @@ if ('speechSynthesis' in window) {
     }
   }
 } else {
-  console.log('else');
+  alert('このデバイスは対応していません。');
 }
