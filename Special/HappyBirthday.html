@@ -170,6 +170,7 @@
         const menu = document.getElementById('menu')
         menu.addEventListener('touchstart',()=>{
           let Text = "得点一覧:";
+          Text += String(Object.keys(data).length)+"/10";
           for(let k of Object.keys(data)){
             Text += "\n"+k+":"+data[k]
           }
