@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -109,10 +108,7 @@
           throw new Error('Child')
         }
         if(localStorage.getItem('data') == null){
-          alert('物をゲットして得点を貯めよう！
-正の値の得点を取れないと終了
-その他にも修了の条件あり
-左上の「MENU」でゲットした物の得点一覧を確認')
+          alert('物をゲットして得点を貯めよう！\n正の値の得点を取れないと終了\nその他にも修了の条件あり\n左上の「MENU」でゲットした物の得点一覧を確認')
         }
         
         const gameContainer = document.getElementById("game-container");
@@ -143,7 +139,7 @@
             { text: "友", score: 10 ,value:[60,80]},
             { text: "受験", score: -10 ,value:[80,90]},
             { text: "神!", score: 15 ,value:[90,99.5]},
-            { text: "\(^_^)/", score: 50 ,value:[99.5,100]}
+            { text: "\\(^_^)/", score: 50 ,value:[99.5,100]}
         ];
         const len = items.length;
         
@@ -175,8 +171,7 @@
         menu.addEventListener('touchstart',()=>{
           let Text = "得点一覧:";
           for(let k of Object.keys(data)){
-            Text += "
-"+k+":"+data[k]
+            Text += "\n"+k+":"+data[k]
           }
           alert(Text);
         })
@@ -224,8 +219,7 @@
                     score += parseInt(item.dataset.score);
                     data[item.innerText] = String(item.dataset.score);
                     localStorage.setItem('data',JSON.stringify(data));
-                    scoreDisplay.innerText = `スコア: ${score}
-今獲得した点数: ${item.dataset.score}`;
+                    scoreDisplay.innerText = `スコア: ${score}\n今獲得した点数: ${item.dataset.score}`;
                     gameContainer.removeChild(item);
                     clearInterval(fallInterval);
                 }
@@ -304,5 +298,4 @@
     </script>
 </body>
 </html>
-
 
